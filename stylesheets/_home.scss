@@ -158,6 +158,9 @@ $icon-size: 100px;
   @media screen and (max-width: $bp-sm - 1) {
     padding: spacing(4) spacing(12);
   }
+  @media screen and (max-width: $bp-xxs - 1) {
+    padding: spacing(4) spacing(2);
+  } 
 }
 
 .member__image-container {

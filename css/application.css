@@ -867,8 +867,10 @@ p {
   background-repeat: no-repeat;
   background-size: cover; }
 
-.row:before, .row:after {
-  display: none; }
+/* Manually comment this out every time untill a fix? */
+
+/*.row:before, .row:after {
+  display: none; }*/
 
 .vision-row {
   padding: 50px 0;
@@ -935,6 +937,9 @@ p {
   @media screen and (max-width: 767px) {
     .member__text {
       padding: 20px 60px; } }
+  @media screen and (max-width: 479px) {
+    .member__text {
+      padding: 20px 10px; } }
 
 .member__image-container {
   display: inline-block;
