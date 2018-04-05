@@ -776,7 +776,7 @@ h3 {
 .navbar-button {
   display: inline-block;
   color: white;
-  padding: 20px 15px 30px; }
+  padding: 25px 15px 30px; }
   @media screen and (max-width: 767px) {
     .navbar-button {
       padding: 15px 10px 20px; } }
@@ -918,12 +918,23 @@ p {
   text-align: center; }
 
 .member__name {
-  display: block;
-  padding-top: 20px;
-  padding-bottom: 20px; }
+  display: block; }
+
+.member__function {
+  color: #ad2a1a; }
+
+.member__name--big {
+  padding: 20px 0 10px; }
+
+.member__name--small {
+  padding: 10px 0; }
 
 .member__text {
-  text-align: justify; }
+  text-align: justify;
+  padding: 10px 0; }
+  @media screen and (max-width: 767px) {
+    .member__text {
+      padding: 20px 60px; } }
 
 .member__image-container {
   display: inline-block;
@@ -933,10 +944,16 @@ p {
   width: 40px;
   position: absolute;
   left: 0;
-  bottom: 0; }
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.25s ease-out; }
+
+.member__image-container:hover .member__linkedin {
+  opacity: 1;
+  transition: opacity 0.5s ease-out; }
 
 .member__image {
-  border-radius: 100%; }
+  border-radius: 50%; }
 
 .member__image--big {
   height: 170px; }
@@ -948,6 +965,12 @@ p {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 67, 95, 0.7); }
+
+.member--small {
+  padding: 25px 0; }
+
+.member__image--small {
+  height: 120px; }
 
 .contact__title {
   color: #ad2a1a;
