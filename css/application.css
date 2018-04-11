@@ -865,32 +865,25 @@ p {
   background-attachment: fixed !important;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  overflow: hidden; }
 
-/* Manually comment this out every time untill a fix? */
-
-/*.row:before, .row:after {
-  display: none; }*/
-
-.vision-row {
-  padding: 50px 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap; }
+@media screen and (min-width: 768px) {
+  .vision-row {
+    display: flex; } }
 
 .vision-column {
-  display: flex;
-  flex-direction: column; }
-
-.vision-column__image {
-  align-items: center;
-  justify-content: center;
+  padding-top: 30px;
   padding-bottom: 30px; }
 
+.vision-column__image {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
 .vision-image {
-  height: 100px; }
+  height: 100px;
+  margin: 20px 0; }
 
 .vision-block__title {
   padding-bottom: 20px;

@@ -71,36 +71,32 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.row:before, .row:after{
-  display: none;
+  overflow: hidden;
 }
 
 .vision-row {
-  padding: spacing(10) 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display:         flex;
-  flex-wrap: wrap;
+  // Dit is super hacky maar het werkt wel
+  @media screen and (min-width: $bp-sm) {
+    display: flex;
+  }
 }
 
 .vision-column {
-  display: flex;
-  flex-direction: column;
+  padding-top: spacing(6);
+  padding-bottom: spacing(6);
 }
 
 .vision-column__image {
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: spacing(6);
 }
 
 $icon-size: 100px;
 
 .vision-image {
   height: $icon-size;
+  margin: spacing(4) 0;
 }
 
 .vision-block__title {
