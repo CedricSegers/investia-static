@@ -776,7 +776,7 @@ h3 {
 .navbar-button {
   display: inline-block;
   color: white;
-  padding: 20px 15px 30px; }
+  padding: 25px 15px 30px; }
   @media screen and (max-width: 767px) {
     .navbar-button {
       padding: 15px 10px 20px; } }
@@ -865,30 +865,25 @@ p {
   background-attachment: fixed !important;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  overflow: hidden; }
 
-.row:before, .row:after {
-  display: none; }
-
-.vision-row {
-  padding: 50px 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap; }
+@media screen and (min-width: 768px) {
+  .vision-row {
+    display: flex; } }
 
 .vision-column {
-  display: flex;
-  flex-direction: column; }
-
-.vision-column__image {
-  align-items: center;
-  justify-content: center;
+  padding-top: 30px;
   padding-bottom: 30px; }
 
+.vision-column__image {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
 .vision-image {
-  height: 100px; }
+  height: 100px;
+  margin: 20px 0; }
 
 .vision-block__title {
   padding-bottom: 20px;
@@ -905,6 +900,75 @@ p {
       font-size: 1.1em;
       padding-left: 10px;
       padding-right: 10px; } }
+
+.board {
+  padding-bottom: 30px; }
+
+.members__title {
+  color: #ad2a1a;
+  text-align: center;
+  margin-bottom: 40px; }
+
+.member {
+  text-align: center; }
+
+.member__name {
+  display: block; }
+
+.member__function {
+  color: #ad2a1a; }
+
+.member__name--big {
+  padding: 20px 0 10px; }
+
+.member__name--small {
+  padding: 10px 0; }
+
+.member__text {
+  text-align: justify;
+  padding: 10px 0; }
+  @media screen and (max-width: 767px) {
+    .member__text {
+      padding: 20px 60px; } }
+  @media screen and (max-width: 479px) {
+    .member__text {
+      padding: 20px 10px; } }
+
+.member__image-container {
+  display: inline-block;
+  position: relative; }
+
+.member__linkedin {
+  width: 40px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.25s ease-out; }
+
+.member__image-container:hover .member__linkedin {
+  opacity: 1;
+  transition: opacity 0.5s ease-out; }
+
+.member__image {
+  border-radius: 50%; }
+
+.member__image--big {
+  height: 170px; }
+
+.linkedin-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 67, 95, 0.7); }
+
+.member--small {
+  padding: 25px 0; }
+
+.member__image--small {
+  height: 120px; }
 
 .contact__title {
   color: #ad2a1a;

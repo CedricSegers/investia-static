@@ -43,7 +43,7 @@
 .navbar-button {
   display: inline-block;
   color: white;
-  padding: spacing(4) spacing(3) spacing(6);
+  padding: spacing(5) spacing(3) spacing(6);
   @media screen and (max-width: $bp-sm - 1) {
     padding: spacing(3) spacing(2) spacing(4)
   }

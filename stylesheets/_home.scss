@@ -71,36 +71,32 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.row:before, .row:after{
-  display: none;
+  overflow: hidden;
 }
 
 .vision-row {
-  padding: spacing(10) 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display:         flex;
-  flex-wrap: wrap;
+  // Dit is super hacky maar het werkt wel
+  @media screen and (min-width: $bp-sm) {
+    display: flex;
+  }
 }
 
 .vision-column {
-  display: flex;
-  flex-direction: column;
+  padding-top: spacing(6);
+  padding-bottom: spacing(6);
 }
 
 .vision-column__image {
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: spacing(6);
 }
 
 $icon-size: 100px;
 
 .vision-image {
   height: $icon-size;
+  margin: spacing(4) 0;
 }
 
 .vision-block__title {
@@ -119,6 +115,92 @@ $icon-size: 100px;
   color: $darker-grey;
   line-height: 135%;
   text-align: justify;
+}
+
+.board {
+  padding-bottom: spacing(6);
+}
+
+.members__title {
+  color: $dark-ruby;
+  text-align: center;
+  margin-bottom: spacing(8);
+}
+
+.member {
+  text-align: center;
+}
+
+.member__name {
+  display: block;
+}
+
+.member__function {
+  // font-style: italic;
+  color: $dark-ruby;
+}
+
+.member__name--big {
+  padding: spacing(4) 0 spacing(2);
+}
+
+.member__name--small {
+  padding: spacing(2) 0;
+}
+
+.member__text {
+  text-align: justify;
+  padding: spacing(2) 0;
+  @media screen and (max-width: $bp-sm - 1) {
+    padding: spacing(4) spacing(12);
+  }
+  @media screen and (max-width: $bp-xxs - 1) {
+    padding: spacing(4) spacing(2);
+  } 
+}
+
+.member__image-container {
+  display: inline-block;
+  position: relative;
+}
+
+.member__linkedin {
+  width: 40px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.25s ease-out;
+}
+
+.member__image-container:hover .member__linkedin {
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+.member__image {
+  border-radius: 50%;
+}
+
+.member__image--big {
+  height: 170px;
+}
+
+.linkedin-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(259, 67, 95, 0.7);
+}
+
+.member--small {
+  padding: spacing(5) 0;
+}
+
+.member__image--small {
+  height: 120px;
 }
 
 .contact__title {
