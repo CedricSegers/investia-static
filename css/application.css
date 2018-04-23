@@ -923,6 +923,9 @@ p {
 
 .member__name--small {
   padding: 10px 0; }
+  @media screen and (max-width: 480px) {
+    .member__name--small {
+      height: 52px; } }
 
 .member__text {
   text-align: justify;
@@ -932,7 +935,7 @@ p {
       padding: 20px 60px; } }
   @media screen and (max-width: 479px) {
     .member__text {
-      padding: 20px 10px; } }
+      padding: 20px 10px 15px; } }
 
 .member__image-container {
   display: inline-block;
